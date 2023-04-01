@@ -1,17 +1,31 @@
 import PySimpleGUI as sg
 
-# Define the layout
-button_list = [f'Button {i}' for i in range(20)]
-layout = [[sg.Listbox(values=button_list, size=(20, 10), select_mode='single')]]
 
-# Create the window
-window = sg.Window('Scrolling Buttons', layout)
+elem_layout = [
+    [sg.Button("Add Element")],
+]
+
+elem_window = sg.Window("Form", elem_layout)
+
 
 # Event loop
 while True:
-    event, values = window.read()
+    event, values = elem_window.read()
+    if event == "Add Element":
+        button_list = ['Oven',
+                       'Microwave',
+                       'Fireplace',
+                       'Heater']
+        button_layout = [[sg.Listbox(values=button_list, size=(20, 10), select_mode='double')]]
+
+        window = sg.Window("List", button_layout)
+
+        event, values = window.read()
+        print(values[0])
+        if event == "Oven":
+            break
     if event == sg.WINDOW_CLOSED:
         break
 
 # Close the window
-window.close()
+elem_window.close()

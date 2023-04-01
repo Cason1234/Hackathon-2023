@@ -21,6 +21,15 @@ while True:
         list_layout = [[pg.OptionMenu(values=options)],
                        [pg.Button("Ok")]]
         window = pg.Window('Options For whatever', list_layout)
+        event, values = window.read()
+    if  event == "Ok":
+        print(values[0])
+        layout = [
+            [pg.Button("1 hour")],
+            [pg.Button("2 hour")],
+        ]
+        window = pg.Window("Times", layout)
+        event, values = window.read()
 
     #print(values[0])
 
