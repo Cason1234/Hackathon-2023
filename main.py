@@ -5,20 +5,24 @@ pg.theme("DarkAmber")
 
 # Step 2: Create Layout
 layout = [
-    [pg.Text("Enter name")],
-    [pg.InputText()],
-    [pg.Button("Ok"), pg.Button("Cancel")]
+    [pg.Button("Add Element")]
 ]
 
 # Step 3: Create Window
-window = pg.Window("Form", layout)
+window = pg.Window("Carbon Footprint Calculator", layout)
 
 # Step 4: Event loop
 while True:
     event, values = window.read()
-    if event == "Cancel" or event == pg.WIN_CLOSED:
+    if event == pg.WIN_CLOSED:
         break
-    print(values[0])
+    if event == "Add Element":
+        options = ["Oven", "Microwave", "TV"]
+        list_layout = [[pg.OptionMenu(values=options)],
+                       [pg.Button("Ok")]]
+        window = pg.Window('Options For whatever', list_layout)
+
+    #print(values[0])
 
 # Step 5: Close window
 window.close()
