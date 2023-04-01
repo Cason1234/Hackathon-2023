@@ -32,6 +32,15 @@ def dishwasher(days, total_CO2):
     total_CO2 = total_CO2 + dishwasher_CO2
     return total_CO2
 
+def flatscreen_tv(hours, total_CO2):
+    flatscreen_CO2 = hours * 365 * .098
+    total_CO2 = total_CO2 + flatscreen_CO2
+    return total_CO2
+
+def car(miles, total_CO2):
+    car_CO2 = miles * 52 * .404
+    total_CO2 = total_CO2 + car_CO2
+    return total_CO2
 
 # Step 1: Set theme
 pg.theme("DarkAmber")
@@ -43,6 +52,8 @@ layout = [
     [pg.Text("How many times do you use your washing machine a week: ", size=(46, 1)), pg.InputText(key='-washing-')],
     [pg.Text("How many times do you use your electric oven a week: ", size=(46, 1)), pg.InputText(key='-electric-')],
     [pg.Text("How many times do you use your dish washer a week: ", size=(46, 1)), pg.InputText(key='-dish-')],
+    [pg.Text("How many hours do you use your tv per day: ", size=(46, 1)), pg.InputText(key='-tv-')],
+    [pg.Text("How many miles do you drive per week: ", size=(46, 1)), pg.InputText(key='-car-')],
     [pg.Button("Submit"), pg.Button("", key='value', visible=False)]
 ]
 
@@ -61,25 +72,16 @@ while True:
         total_CO2 = washing_machine(float(values['-washing-']), total_CO2)
         total_CO2 = electric_oven(float(values['-electric-']), total_CO2)
         total_CO2 = dishwasher(float(values['-dish-']), total_CO2)
+        total_CO2 = flatscreen_tv(float(values['-tv-']), total_CO2)
+        total_CO2 = car(float(values['-car-']), total_CO2)
         total_CO2 = round(total_CO2, 3)
-        window['value'].update(text=f'{total_CO2}kg is your Carbon Footprint', visible=True)
-        #pg.Button()
-
-    if event == "Microwave":
-        window.close()
+        window['value'].update(text=f'{total_CO2}kg is your yearly Carbon Footprint', visible=True)
+    if event == 'value':
         layout = [
-            [pg.Text("Times used per week: "), pg.InputText()],
-            [pg.Button("Submit")]
+            [pg.Text("Yo")]
         ]
-        window = pg.Window("Times", layout)
-        #event, values = window.read()
 
 
-
-
-
-
-    #print(values[0])
 
 # Step 5: Close window
 window.close()

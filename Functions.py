@@ -30,6 +30,16 @@ def dishwasher(days, total_CO2):
     total_CO2 = total_CO2 + dishwasher_CO2
     return total_CO2
 
+def flatscreen_tv(days, total_CO2):
+    flatscreen_CO2 = days * 365 * .098
+    total_CO2 = total_CO2 + flatscreen_CO2
+    return total_CO2
+
+def calc_CO2(total_CO2):
+    if total_CO2 > 150:
+        horses = total_CO2 / 5
+        print(f"You have the emissions rate of {horses} horses.")
+
 
 def main():
     return 0
