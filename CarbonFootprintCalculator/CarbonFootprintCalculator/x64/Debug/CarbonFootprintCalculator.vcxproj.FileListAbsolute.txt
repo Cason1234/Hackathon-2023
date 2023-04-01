@@ -1,0 +1,2 @@
+C:\Users\Green\source\repos\CarbonFootprintCalculator\CarbonFootprintCalculator\x64\Debug\CarbonFootprintCalculator.vcxproj.AssemblyReference.cache
+C:\Users\Green\source\repos\CarbonFootprintCalculator\CarbonFootprintCalculator\x64\Debug\CarbonFootprintCalculator.vcxproj.SuggestedBindingRedirects.cache
