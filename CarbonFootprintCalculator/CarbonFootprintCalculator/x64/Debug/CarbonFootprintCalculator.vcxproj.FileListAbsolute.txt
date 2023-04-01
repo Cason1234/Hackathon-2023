@@ -1,6 +1,0 @@
-C:\Users\Green\source\repos\CarbonFootprintCalculator\CarbonFootprintCalculator\x64\Debug\CarbonFootprintCalculator.vcxproj.AssemblyReference.cache
-C:\Users\Green\source\repos\CarbonFootprintCalculator\CarbonFootprintCalculator\x64\Debug\CarbonFootprintCalculator.vcxproj.SuggestedBindingRedirects.cache
-C:\Users\Green\source\repos\Hackathon-2023\CarbonFootprintCalculator\CarbonFootprintCalculator\x64\Debug\CarbonFootprintCalculator.vcxproj.AssemblyReference.cache
-C:\Users\Green\source\repos\Hackathon-2023\CarbonFootprintCalculator\CarbonFootprintCalculator\x64\Debug\CarbonFootprintCalculator.vcxproj.SuggestedBindingRedirects.cache
-C:\Users\Green\source\repos\Hackathon-2023\CarbonFootprintCalculator\CarbonFootprintCalculator\x64\Debug\CarbonFootprintCalculator.MainForm.resources
-C:\Users\Green\source\repos\Hackathon-2023\CarbonFootprintCalculator\CarbonFootprintCalculator\x64\Debug\CarbonFootprintCalculator.vcxproj.GenerateResource.cache
