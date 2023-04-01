@@ -79,10 +79,10 @@ while True:
         total_CO2 = flatscreen_tv(float(values['-tv-']), total_CO2)
         total_CO2 = car(float(values['-car-']), total_CO2)
         total_CO2 = round(total_CO2, 3)
-        window['value'].update(text=f'You produce about {total_CO2}kg of carbon per year', visible=True)
+        window['value'].update(text=f'You produce about {total_CO2}kg of carbon per year.', visible=True)
     if event == 'value':
         layout = [
-            [pg.Text(f'In order to offset a carbon footprint of this size you would have to plant {int(round(total_CO2/20, 0))} trees')]
+            [pg.Text(f'In order to offset a carbon footprint of this size you would have to plant {int(round(total_CO2/20, 0))} trees.')]
         ]
         window.close()
         window = pg.Window("Carbon Footprint Calculator", layout, size=(windowSize, int(windowSize/2)))
